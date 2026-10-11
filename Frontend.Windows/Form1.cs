@@ -1,4 +1,5 @@
 using Backend;
+
 namespace Frontend.Windows;
 
 public partial class Form1 : Form
@@ -24,11 +25,9 @@ public partial class Form1 : Form
     {
         if (txtDisplay.Text.Length > 0)
         {
-            txtDisplay.Text =
-                txtDisplay.Text.Substring(
-                    0,
-                    txtDisplay.Text.Length - 1);
-
+            txtDisplay.Text = txtDisplay.Text.Substring(
+                0,
+                txtDisplay.Text.Length - 1);
         }
     }
 
@@ -37,7 +36,7 @@ public partial class Form1 : Form
         try
         {
             var result =
-                Backend.ExpressionEvaluator.Evalute(
+                ExpressionEvaluator.Evalute(
                     txtDisplay.Text);
 
             txtDisplay.Text = result.ToString();
@@ -47,8 +46,6 @@ public partial class Form1 : Form
             MessageBox.Show(
                 ex.Message,
                 "Error");
-
         }
     }
-
 }
