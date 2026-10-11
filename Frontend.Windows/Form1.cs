@@ -28,6 +28,7 @@ public partial class Form1 : Form
                 txtDisplay.Text.Substring(
                     0,
                     txtDisplay.Text.Length - 1);
+
         }
     }
 
@@ -46,6 +47,8 @@ public partial class Form1 : Form
             MessageBox.Show(
                 ex.Message,
                 "Error");
+
         }
     }
+
 }
